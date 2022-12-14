@@ -4,11 +4,16 @@ public class Persona {
     private String telefono;
     private String mail;
 
+
     
 
 
 
-
+    @Override
+    public String toString() {
+        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", mail=" + mail
+                + "]";
+    }
     public String getNombre() {
         return nombre;
     }
