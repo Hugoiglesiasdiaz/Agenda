@@ -68,7 +68,12 @@ public class Agenda {
             System.out.println("Ese contacto no existe.");
         else{
             //Copiar elementos hasta el índice a eliminar
-            
+            Persona[] aux = new Persona[contactos.length - 1];
+            for(int i = 0; i< contactos.length;i++){
+                if(i != indice - 1)
+                aux[i] = contactos[i];
+            }
+            contactos = aux;
         }
 
     }
