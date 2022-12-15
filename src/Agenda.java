@@ -69,13 +69,20 @@ public class Agenda {
         else{
             //Copiar elementos hasta el índice a eliminar
             Persona[] aux = new Persona[contactos.length - 1];
-            for(int i = 0; i< contactos.length;i++){
-                if(i != indice - 1)
-                aux[i] = contactos[i];
+            System.arraycopy(contactos, 0, aux, 0, indice-1);
+            System.arraycopy(contactos, indice, aux, indice-1, contactos.length - indice);
+
+            /*for(int i = 0; i< contactos.length;i++){
+                if(i < indice - 1)
+                    aux[i] = contactos[i];          PARA PROBAR ESTA FUNCION HACE FALTA AÑADIR UN }
+                else if(i > indice - 1){
+                    aux[i-1] = contactos[i];
+                }*/
+                contactos = aux;
             }
-            contactos = aux;
+            
         }
 
     }
 
-}
+
