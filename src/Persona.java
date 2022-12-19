@@ -2,18 +2,17 @@ public class Persona {
     private String nombre;
     private String apellidos;
     private String telefono;
-    private String mail;
-
+    private String correoE;
+    
 
     
 
-
-
     @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", mail=" + mail
-                + "]";
+        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", correoE="
+                + correoE + "]";
     }
+    
     public String getNombre() {
         return nombre;
     }
@@ -32,13 +31,14 @@ public class Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    public String getMail() {
-        return mail;
+    public String getCorreoE() {
+        return correoE;
     }
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setCorreoE(String correoE) {
+        this.correoE = correoE;
     }
 
+    
     
 
 }
